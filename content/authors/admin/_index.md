@@ -1,13 +1,13 @@
 ---
 # Display name
-title: Shuai Liu
+title: Shuai Liu (Jesse)
 
 # Name pronunciation (optional)
 name_pronunciation: ''
 
 # Full name (for SEO)
-first_name: Alex
-last_name: Johnson
+first_name: Shuai
+last_name: Liu
 
 # Pronouns (optional)
 pronouns: he/him
