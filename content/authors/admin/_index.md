@@ -53,7 +53,7 @@ interests:
   - CPU-GPU numerical acceleration
   - Robotics
   - Physical AI
-  - Aerospace Engineering
+  - Mechanical and Aerospace Engineering
   - Rocket
 
 education:
