@@ -23,7 +23,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD Candidate in Multi-physics & AI
+role: PhD Candidate
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -48,10 +48,10 @@ profiles:
     url: https://orcid.org/0009-0001-4325-0646
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Multi-physics simulation
+  - Reinforcement Learning control
+  - CPU-GPU numerical acceleration
+  - Robotics
 
 education:
   - area: PhD Mechanical Engineering (Multi-physics & AI)
@@ -64,7 +64,7 @@ education:
     button:
       text: 'Read Thesis'
       url: 'https://example.com/thesis.pdf'
-  - area: BS Mechanical Engineering (Additive Manufacture Elite Class)
+  - area: BS Mechanical Engineering (AM Elite Class)
     institution: Xi'an Jiaotong University
     icon: ""
     date_start: 2009-09-01
@@ -160,4 +160,6 @@ awards:
       Recognized for contributions to scaling laws in deep learning.
 ---
 
-Shuai Liu is a Senior AI Research Scientist at Meta AI, where he leads groundbreaking work on large language models and multimodal systems. His research has been published in top conferences like NeurIPS and ICML, with over 10,000 citations. Alex is passionate about pushing the boundaries of AI while ensuring ethical development. Outside of work, he enjoys hiking in the Rockies, building custom PCs, and mentoring the next generation of AI talent.
+Shuai Liu (Jesse) is a researcher specializing in multi-physics simulation, reinforcement-learning-based control, and CPU–GPU numerical acceleration. His work has been published in leading journals such as Journal of Fluid Mechanics, Physics of Fluids, Journal of Sound and Vibration, and Mechanical Systems and Signal Processing. He focuses on advancing ALE-based FSI modeling, nonlinear dynamics and bifurcation analysis, and high-performance scientific computing—including CUDA kernel optimization and differentiable simulation.
+
+He is passionate about bridging physics-based modeling with intelligent control, and applying these capabilities to automation, robotics, and technologies for space exploration. Outside of work, he enjoys experimenting with GPU architectures, studying modern simulation frameworks, and exploring new ways to connect physics, AI, and real-world systems.
