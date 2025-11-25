@@ -53,6 +53,8 @@ interests:
   - CPU-GPU numerical acceleration
   - Robotics
   - Physical AI
+  - Aerospace Engineering
+  - Rocket
 
 education:
   - area: PhD Mechanical Engineering (Multi-physics & AI)
