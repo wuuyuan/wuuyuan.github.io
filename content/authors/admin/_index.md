@@ -54,8 +54,8 @@ interests:
   - AI Ethics
 
 education:
-  - area: PhD Computer Science (AI Focus)
-    institution: Stanford University
+  - area: PhD Mechanical Engineering (Multi-physics & AI)
+    institution: Shanghai Jiao Tong University
     icon: ""
     date_start: 2015-09-01
     date_end: 2019-06-30
@@ -64,8 +64,8 @@ education:
     button:
       text: 'Read Thesis'
       url: 'https://example.com/thesis.pdf'
-  - area: BS Computer Science
-    institution: MIT
+  - area: BS Mechanical Engineering (Additive Manufacture Elite Class)
+    institution: Xi'an Jiaotong University
     icon: ""
     date_start: 2009-09-01
     date_end: 2013-05-31
