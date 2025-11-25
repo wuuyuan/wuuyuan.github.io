@@ -52,6 +52,7 @@ interests:
   - Reinforcement Learning control
   - CPU-GPU numerical acceleration
   - Robotics
+  - Physical AI
 
 education:
   - area: PhD Mechanical Engineering (Multi-physics & AI)
