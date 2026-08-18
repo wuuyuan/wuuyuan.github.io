@@ -14,7 +14,7 @@ pronouns: he/him
 
 # Status emoji
 status:
-  icon: 🚀
+  icon: ''
 
 # Is this the primary user of the site?
 superuser: true
@@ -23,7 +23,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD Candidate
+role: PhD Candidate, Mechanical Engineering
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -31,13 +31,10 @@ organizations:
     url: https://www.sjtu.edu.cn/
 
 # Social network links
-# Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
     url: 'mailto:liushuai0902@sjtu.edu.cn'
     label: E-mail Me
-  # - icon: brands/x
-  #   url: https://twitter.com/AlexAIResearch
   - icon: brands/github
     url: https://github.com/wuuyuan
   - icon: brands/linkedin
@@ -48,119 +45,103 @@ profiles:
     url: https://orcid.org/0009-0001-4325-0646
 
 interests:
-  - Multi-physics simulation
-  - Reinforcement Learning control
-  - CPU-GPU numerical acceleration
-  - Robotics
-  - Physical AI
-  - Mechanical and Aerospace Engineering
-  - Rocket
+  - Physics-based simulation
+  - Implicit world models
+  - Reinforcement learning
+  - Embodied AI
+  - Tactile simulation
+  - GPU computing
 
 education:
-  - area: PhD Mechanical Engineering (Multi-physics & AI)
+  - area: PhD Mechanical Engineering
     institution: Shanghai Jiao Tong University
     icon: ""
-    date_start: 2015-09-01
-    date_end: 2019-06-30
+    date_start: 2022-09-01
+    date_end: 2027-06-30
     summary: |
-      Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com/thesis.pdf'
-  - area: BS Mechanical Engineering (AM Elite Class)
+      Expected June 2027. Research on high-fidelity multiphysics simulation, implicit world models, and reinforcement learning for continuum and embodied systems. 12 SCI papers (5 first-author, including *J. Fluid Mech.*, *Phys. Fluids*, and *J. Sound Vib.*). National Scholarship (2025).
+  - area: B.Eng. Mechanical Engineering (Honors / Elite Class)
     institution: Xi'an Jiaotong University
     icon: ""
-    date_start: 2009-09-01
-    date_end: 2013-05-31
+    date_start: 2018-09-01
+    date_end: 2022-06-30
     summary: |
-      GPA: 3.9/4.0
-
-      Minored in Mathematics. President of AI Club.
+      GPA 90.89/100 (top 3.5%). SMC First-Class Scholarship and Outstanding Student Award.
 
 work:
-  - position: Senior AI Research Scientist
-    company_name: Meta AI
-    company_url: 'https://ai.meta.com/'
+  - position: Research Intern, RL Post-Training for Robot Foundation Models
+    company_name: AgiBot
+    company_url: 'https://www.agibot.com/'
     icon: ''
-    date_start: 2020-01-01
+    date_start: 2026-06-01
     date_end: ''
-    summary: |2-
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
-  - position: AI Research Intern
-    company_name: OpenAI
-    company_url: 'https://openai.com/'
-    icon: ''
-    date_start: 2019-06-01
-    date_end: 2019-12-31
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      Developing scalable, simulation-based reinforcement learning post-training for embodied manipulation with vision–language–action (VLA) and world-model architectures. Contributing to distributed PPO/GRPO training pipelines, including rollout, inference, and multi-node training for generalizable dexterous manipulation.
+  - position: Research Intern, Embodied-AI Simulation Engines
+    company_name: Lightwheel
+    company_url: 'https://lightwheel.ai/'
+    icon: ''
+    date_start: 2026-01-01
+    date_end: 2026-04-30
+    summary: |
+      Built embodied-AI simulation and synthetic-data pipelines with Genesis, Newton, and NVIDIA Warp, improving throughput by 2.6× for contact-rich pretraining data, policy evaluation, and sim-to-real alignment. Led a high-performance tactile simulator in Newton and NVIDIA Isaac Lab with equivalent-thickness flexible-body formulations (5–10× mesh reduction, over 50 Hz tactile-grasp throughput). Built a closed-loop sim-to-real / real-to-sim pipeline coupling FEM sensing, rigid–flexible contact, and IPC.
+  - position: Research Intern, GPU Computing Infrastructure
+    company_name: Synopsys
+    company_url: 'https://www.synopsys.com/'
+    icon: ''
+    date_start: 2025-07-01
+    date_end: 2025-10-31
+    summary: |
+      Optimized GPU solver operators and linear-algebra libraries for physics simulation with shared-memory tiling and register-level acceleration, achieving about 1.3× average speedup on production workloads across H100/L40 clusters. Optimized batched GEMM kernels with a two-stage shared-memory pipeline (about 1.2× average, up to 1.5×).
 
 # Skills
-# Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: Embodied models and post-training
     items:
-      - name: Python & PyTorch
-        description: ''
-        percent: 95
-        icon: code-bracket
-      - name: Machine Learning
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: Cloud Computing (AWS/GCP)
-        description: ''
-        percent: 85
-        icon: cloud
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking in the Rockies
-        description: ''
-        percent: 80
-        icon: person-simple-walk
-      - name: Building Custom PCs
-        description: ''
-        percent: 90
+      - name: VLA / world models
+        description: Vision–language–action models, world models, and simulation-based RL post-training
         icon: cpu-chip
-      - name: Sci-Fi Reading
-        description: ''
-        percent: 70
-        icon: book-open
+      - name: Reinforcement learning
+        description: PPO, GRPO, model-based RL, and sim-to-real policy transfer
+        icon: chart-bar
+  - name: Simulation
+    items:
+      - name: Physics solvers
+        description: FEM / FVM / ALE, IPC, fluid–structure–acoustic coupling, OpenFOAM, preCICE
+        icon: cube
+      - name: Robot simulation
+        description: Genesis, Newton, Warp, Isaac Sim/Lab, tactile and deformable-body simulation
+        icon: cube-transparent
+  - name: Computing
+    items:
+      - name: Systems
+        description: C/C++, Python, PyTorch, CUDA, MPI/OpenMP, multi-GPU training
+        icon: code-bracket
 
 languages:
-  - name: English
+  - name: Chinese
     percent: 100
-  - name: Spanish
-    percent: 50
+  - name: English
+    percent: 90
 
 # Awards.
-#   Add/remove as many awards below as you like.
-#   Only `title`, `awarder`, and `date` are required.
-#   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Best Paper Award
-    url: https://neurips.cc/
-    date: '2022-12-01'
-    awarder: NeurIPS
-    icon: hero/trophy
-    summary: |
-      Awarded for groundbreaking work on efficient training of large models.
-  - title: AI Innovation Grant
-    url: https://www.nsf.gov/
-    date: '2021-06-15'
-    awarder: National Science Foundation
-    icon: hero/currency-dollar
-    summary: |
-      $500,000 grant for research in ethical AI development.
-  - title: Outstanding PhD Thesis
-    url: https://www.stanford.edu/
-    date: '2019-06-30'
-    awarder: Stanford University
+  - title: National Scholarship for Doctoral Students
+    url: ''
+    date: '2025-12-01'
+    awarder: Ministry of Education of the People's Republic of China
     icon: hero/academic-cap
     summary: |
-      Recognized for contributions to scaling laws in deep learning.
+      Awarded for doctoral research in physics-based simulation and learning-based control.
+  - title: National First Prize, Intelligent Manufacturing
+    url: ''
+    date: '2021-12-01'
+    awarder: 3rd China College Students Mechanical Engineering Innovation Competition
+    icon: hero/trophy
+    summary: |
+      National First Prize and First Prize in Industrial Vision. Led robot–vision integration for a physical production line, including manipulator programming, automated grasping, vision-based detection and pose estimation, and a PLC/OPC UA perception–action loop.
 ---
 
-Shuai Liu (Jesse) is a researcher specializing in multi-physics simulation, reinforcement-learning-based control, and CPU–GPU numerical acceleration. His work has been published in leading journals such as J. Fluid Mech., Phys. Fluids, J. Sound Vib., and Mech. Syst. Signal Proc. He is passionate about bridging physics-based modeling with intelligent control, and applying these capabilities to automation, robotics, and technologies for space exploration. Outside of work, he enjoys experimenting with GPU architectures, studying modern simulation frameworks, and exploring new ways to connect physics, AI, and real-world systems.
+Shuai Liu (Jesse) is a PhD candidate in Mechanical Engineering at Shanghai Jiao Tong University. He works on physics-based simulation, implicit world models, and reinforcement learning for embodied systems — from high-fidelity multiphysics solvers to simulation-based foundation-model post-training.
+
+His research has three connected lines: **explicit physics** (FEM/FVM/ALE solvers for fluid–structure–electrical–acoustic interaction), **implicit world models** (DMD/Koopman latent next-state prediction), and **learning-based control** (multimodal RL, gain networks, and sim-to-real transfer). He has published 12 SCI papers, including 5 first-author papers in *J. Fluid Mech.*, *Phys. Fluids*, *J. Sound Vib.* (×2), and *Sensors and Actuators A*.

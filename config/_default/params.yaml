@@ -13,9 +13,9 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    org_name: Shanghai Jiao Tong University
+    description: 'Shuai Liu (Jesse) is a PhD candidate at Shanghai Jiao Tong University working on physics-based simulation, implicit world models, and reinforcement learning for embodied systems.'
+    twitter: ''
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -35,14 +35,14 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: 'Automation pushing toward an interstellar horizon'
+      text: 'Shuai Liu'
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Shuai Liu'
     license:
-      enable: true
+      enable: false
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
@@ -55,6 +55,6 @@ locale:
 # Site features
 features:
   math:
-    enable: false
+    enable: true
   privacy_pack:
     enable: false
