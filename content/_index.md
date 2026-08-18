@@ -29,13 +29,13 @@ sections:
       title: 'Research'
       subtitle: ''
       text: |-
-        I build **simulation-to-learning systems** for physical and embodied AI.
+        I am an **embodied foundation model researcher**. The core of the work is simulation-based post-training of vision–language–action (VLA) and world-model policies for robot foundation models.
 
-        The work has three connected lines:
+        Physics simulation is the substrate that makes that post-training possible, along three connected lines:
 
-        1. **Explicit physics.** High-fidelity FEM/FVM/ALE solvers for fluid–structure–electrical–acoustic interaction and large-deformation flexible bodies, used as data engines and evaluation environments.
+        1. **Embodied post-training.** Distributed PPO/GRPO and related RL pipelines for VLA, world-model, and world-action-model policies, with simulators as rollout and evaluation engines for generalizable dexterous manipulation.
         2. **Implicit world models.** DMD/Koopman latent next-state prediction over high-fidelity physical fields, enabling model-based RL in latent space.
-        3. **Learning-based control.** Multimodal reinforcement learning, learned sensor–actuator gain networks, and sim-to-real transfer — recently extended to simulation-based post-training of embodied foundation models.
+        3. **Explicit physics.** High-fidelity FEM/FVM/ALE solvers for fluid–structure–electrical–acoustic interaction and large-deformation flexible bodies, used as data engines and evaluation environments — including tactile and contact-rich robot simulation.
 
         Please [email me](mailto:liushuai0902@sjtu.edu.cn) if you would like to collaborate.
     design:
@@ -44,23 +44,34 @@ sections:
     id: papers
     content:
       title: Featured Publications
+      count: 0
       filters:
         folders:
           - publications
         featured_only: true
     design:
-      view: citation
+      view: paper-row
       columns: 1
+      fill_image: false
+      show_date: false
+      show_read_time: false
+      show_read_more: false
   - block: collection
     content:
       title: Recent Publications
       text: ''
+      count: 0
       filters:
         folders:
           - publications
         exclude_featured: true
     design:
-      view: citation
+      view: paper-row
+      columns: 1
+      fill_image: false
+      show_date: false
+      show_read_time: false
+      show_read_more: false
   - block: collection
     id: talks
     content:

@@ -23,7 +23,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD Candidate, Mechanical Engineering
+role: Embodied Foundation Model Researcher
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -45,10 +45,10 @@ profiles:
     url: https://orcid.org/0009-0001-4325-0646
 
 interests:
+  - Embodied foundation models
+  - VLA / world models
+  - RL post-training
   - Physics-based simulation
-  - Implicit world models
-  - Reinforcement learning
-  - Embodied AI
   - Tactile simulation
   - GPU computing
 
@@ -59,7 +59,7 @@ education:
     date_start: 2022-09-01
     date_end: 2027-06-30
     summary: |
-      Expected June 2027. Research on high-fidelity multiphysics simulation, implicit world models, and reinforcement learning for continuum and embodied systems. 12 SCI papers (5 first-author, including *J. Fluid Mech.*, *Phys. Fluids*, and *J. Sound Vib.*). National Scholarship (2025).
+      Expected June 2027. Research on embodied foundation models — simulation-based post-training of VLA and world-model policies, with high-fidelity physics simulation as the data and evaluation substrate. 12 SCI papers (5 first-author, including *J. Fluid Mech.*, *Phys. Fluids*, and *J. Sound Vib.*). National Scholarship (2025).
   - area: B.Eng. Mechanical Engineering (Honors / Elite Class)
     institution: Xi'an Jiaotong University
     icon: ""
@@ -72,6 +72,8 @@ work:
   - position: Research Intern, RL Post-Training for Robot Foundation Models
     company_name: AgiBot
     company_url: 'https://www.agibot.com/'
+    logo: logos/agibot.png
+    logo_bg: light
     icon: ''
     date_start: 2026-06-01
     date_end: ''
@@ -80,6 +82,8 @@ work:
   - position: Research Intern, Embodied-AI Simulation Engines
     company_name: Lightwheel
     company_url: 'https://lightwheel.ai/'
+    logo: logos/lightwheel.png
+    logo_bg: dark
     icon: ''
     date_start: 2026-01-01
     date_end: 2026-04-30
@@ -88,6 +92,8 @@ work:
   - position: Research Intern, GPU Computing Infrastructure
     company_name: Synopsys
     company_url: 'https://www.synopsys.com/'
+    logo: logos/synopsys.jpg
+    logo_bg: brand
     icon: ''
     date_start: 2025-07-01
     date_end: 2025-10-31
@@ -142,6 +148,6 @@ awards:
       National First Prize and First Prize in Industrial Vision. Led robot–vision integration for a physical production line, including manipulator programming, automated grasping, vision-based detection and pose estimation, and a PLC/OPC UA perception–action loop.
 ---
 
-Shuai Liu (Jesse) is a PhD candidate in Mechanical Engineering at Shanghai Jiao Tong University. He works on physics-based simulation, implicit world models, and reinforcement learning for embodied systems — from high-fidelity multiphysics solvers to simulation-based foundation-model post-training.
+Shuai Liu (Jesse) is an **embodied foundation model researcher** and a PhD candidate in Mechanical Engineering at Shanghai Jiao Tong University. He works on simulation-based post-training of vision–language–action (VLA) and world-model policies for robot foundation models, and on the physics simulators, tactile engines, and RL systems that make that post-training scale.
 
-His research has three connected lines: **explicit physics** (FEM/FVM/ALE solvers for fluid–structure–electrical–acoustic interaction), **implicit world models** (DMD/Koopman latent next-state prediction), and **learning-based control** (multimodal RL, gain networks, and sim-to-real transfer). He has published 12 SCI papers, including 5 first-author papers in *J. Fluid Mech.*, *Phys. Fluids*, *J. Sound Vib.* (×2), and *Sensors and Actuators A*.
+The physics line underneath — high-fidelity FEM/FVM/ALE solvers, DMD/Koopman latent world models, and multimodal RL — supplies data, evaluation environments, and control structure for embodied models. He has published 12 SCI papers, including 5 first-author papers in *J. Fluid Mech.*, *Phys. Fluids*, *J. Sound Vib.* (×2), and *Sensors and Actuators A*.

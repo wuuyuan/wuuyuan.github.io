@@ -1,15 +1,15 @@
 ---
-title: Embodied Simulation and RL Post-Training
+title: Embodied Foundation Models and Simulation RL
 date: 2026-06-01
-summary: Tactile/embodied simulation engines and simulation-based reinforcement learning post-training for robot foundation models.
+summary: Simulation-based reinforcement learning post-training for robot foundation models, with tactile and contact-rich simulation as the substrate.
 tags:
   - embodied AI
   - tactile simulation
   - RL post-training
 ---
 
-The third line takes physics simulation into **embodied AI**.
+The core line is **embodied foundation models**: simulation-based reinforcement-learning post-training of vision–language–action and world-model policies for generalizable dexterous manipulation.
 
-On the data/simulation side, GPU-parallel engines (Genesis, Newton, Warp, Isaac Lab) are used for contact-rich synthetic data, tactile-grasp simulation, and sim-to-real / real-to-sim calibration. Equivalent-thickness flexible-body formulations reduce mesh cost while keeping rates high enough for online RL.
+On the model side, GPU-parallel simulators drive distributed PPO/GRPO pipelines, including rollout, inference, and multi-node training. On the data/simulation side, Genesis, Newton, Warp, and Isaac Lab generate contact-rich synthetic data and tactile-grasp streams, with equivalent-thickness flexible-body formulations that keep rates high enough for online RL.
 
-On the model side, the same simulation substrate is used for distributed reinforcement-learning post-training of vision–language–action and world-model policies, including rollout, inference, and multi-node training pipelines for dexterous manipulation.
+High-fidelity physics is the substrate, not the destination — it supplies the data engine, the evaluator, and the sim-to-real / real-to-sim loop for robot foundation models.

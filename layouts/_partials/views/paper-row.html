@@ -1,0 +1,74 @@
+{{ $item := .item }}
+{{ $link := $item.RelPermalink }}
+{{ $target := "" }}
+{{ if $item.Params.external_link }}
+  {{ $link = $item.Params.external_link }}
+  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ end }}
+
+{{ $resource := partial "functions/get_featured_image.html" $item }}
+{{ $anchor := $item.Params.image.focal_point | default "Center" }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+{{ $venue := $item.Params.publication_short | default $item.Params.publication }}
+{{ $abstract := $item.Params.abstract | default ($item.Params.summary | default $item.Summary) }}
+{{ $first_author := false }}
+{{ with $item.Params.authors }}
+  {{ if eq (index . 0) "admin" }}{{ $first_author = true }}{{ end }}
+{{ end }}
+
+<article class="group flex flex-col md:flex-row bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-2xl ring-1 ring-zinc-900/5 dark:ring-white/10 shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10">
+  <div class="relative md:w-[38%] shrink-0 bg-zinc-50 dark:bg-zinc-800 min-h-[12rem] md:min-h-[14rem]">
+    {{ with $resource }}
+      {{ $fitted := .Fit (printf "800x600 %s" $anchor) }}
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="block h-full w-full">
+        <img
+          class="w-full h-full object-contain p-3 md:p-4"
+          src="{{ $fitted.RelPermalink }}"
+          width="{{ $fitted.Width }}"
+          height="{{ $fitted.Height }}"
+          loading="lazy"
+          decoding="async"
+          alt="{{ $item.Title | plainify }} figure">
+      </a>
+    {{ else }}
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="flex h-full min-h-[12rem] items-center justify-center bg-gradient-to-br from-blue-500/15 to-purple-500/15">
+        <span class="text-sm text-zinc-400">{{ $item.Date.Format "2006" }}</span>
+      </a>
+    {{ end }}
+  </div>
+
+  <div class="flex flex-1 flex-col p-5 md:p-6 space-y-3">
+    <div class="flex flex-wrap items-center gap-2 text-xs">
+      {{ if $first_author }}
+      <span class="inline-flex items-center px-2 py-0.5 rounded-full font-semibold bg-primary-100 text-primary-800 dark:bg-primary-900/40 dark:text-primary-300">First author</span>
+      {{ end }}
+      {{ with $venue }}
+      <span class="inline-flex items-center px-2 py-0.5 rounded-full font-medium bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">{{ . | markdownify }}</span>
+      {{ end }}
+      <time class="text-zinc-500 dark:text-zinc-400" datetime="{{ $item.Date.Format "2006-01-02" }}">{{ $item.Date.Format "2006" }}</time>
+    </div>
+
+    <h3 class="text-lg font-bold tracking-tight text-zinc-900 dark:text-zinc-100 leading-snug">
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="hover:text-blue-600 dark:hover:text-blue-400 hover:underline">{{ $item.Title }}</a>
+    </h3>
+
+    {{ if $item.Params.authors }}
+    <p class="text-sm text-zinc-600 dark:text-zinc-400">
+      {{ partial "page_metadata_authors" $item }}
+    </p>
+    {{ end }}
+
+    {{ with $abstract }}
+    <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-4">
+      {{ . | plainify | htmlUnescape | truncate 320 }}
+    </p>
+    {{ end }}
+
+    <div class="pt-1 mt-auto flex flex-wrap items-center gap-x-4 gap-y-1">
+      {{ if $has_attachments }}
+        {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+      {{ end }}
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:underline">Details</a>
+    </div>
+  </div>
+</article>

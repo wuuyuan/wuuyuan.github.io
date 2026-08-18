@@ -12,4 +12,4 @@ High-fidelity **explicit physics solvers** are the first line of this research: 
 
 The solvers generate multimodal physical data, support programmable piezoelectric networks, and provide reproducible environments for control experiments. The coupled pipeline uses OpenFOAM, an in-house dynamics solver, and preCICE, and is registered under China's software copyright system.
 
-Selected first-author papers in this line include work in *J. Fluid Mech.*, *Phys. Fluids*, and *J. Sound Vib.*
+Selected first-author papers in this line include work in *J. Fluid Mech.*, *Phys. Fluids*, and *J. Sound Vib.* The same solvers later become data engines and evaluation environments for embodied foundation-model post-training.

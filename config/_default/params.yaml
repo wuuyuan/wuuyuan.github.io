@@ -14,7 +14,7 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: Shanghai Jiao Tong University
-    description: 'Shuai Liu (Jesse) is a PhD candidate at Shanghai Jiao Tong University working on physics-based simulation, implicit world models, and reinforcement learning for embodied systems.'
+    description: 'Shuai Liu (Jesse) is an embodied foundation model researcher and PhD candidate at Shanghai Jiao Tong University, working on simulation-based post-training of VLA and world-model policies for robot foundation models.'
     twitter: ''
   analytics:
     google_analytics: ''
