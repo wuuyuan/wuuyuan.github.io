@@ -95,11 +95,11 @@ sections:
         enable: true
         text: See all posts
     design:
-      view: card
-      columns: 2
+      view: blog-row
+      columns: 1
       show_date: true
       show_read_time: true
-      show_read_more: false
+      show_read_more: true
   - block: collection
     id: news
     content:

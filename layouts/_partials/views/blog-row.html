@@ -1,0 +1,53 @@
+{{ $item := .item }}
+{{ $link := $item.RelPermalink }}
+{{ $showDate := .config.show_date | default true }}
+{{ $showReadTime := .config.show_read_time | default true }}
+{{ $showReadMore := .config.show_read_more | default true }}
+
+{{ $words := len (split ($item.Content | plainify) " ") }}
+{{ $readTime := div $words 200 }}
+{{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+
+<article class="group flex items-start gap-6 sm:gap-10 py-8 sm:py-10 first:pt-4">
+  {{ if $showDate }}
+  <time datetime="{{ $item.Date.Format "2006-01-02" }}" class="hidden sm:block w-28 shrink-0 pt-1.5 text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+    {{ $item.Date | time.Format (site.Params.locale.date_format | default "Jan 2, 2006") }}
+  </time>
+  {{ end }}
+  <div class="min-w-0 flex-1">
+    <h3 class="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 leading-snug">
+      <a href="{{ $link }}" class="underline-offset-4 hover:underline decoration-primary-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+        {{ $item.Title }}
+      </a>
+    </h3>
+    {{ with ($item.Params.summary | default $item.Summary) }}
+    <p class="mt-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-2 max-w-3xl">
+      {{ . | plainify | htmlUnescape | truncate 240 }}
+    </p>
+    {{ end }}
+    <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-zinc-500 dark:text-zinc-400">
+      {{ if $showReadTime }}
+      <span class="inline-flex items-center gap-1.5 whitespace-nowrap">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        {{ $readTime }} {{ i18n "minute_read" }}
+      </span>
+      {{ end }}
+      {{ with ($item.GetTerms "tags") }}
+        {{ range first 3 . }}
+        <a href="{{ .RelPermalink }}" class="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold bg-primary-100 text-primary-800 dark:bg-primary-900/40 dark:text-primary-300 hover:bg-primary-200 dark:hover:bg-primary-800/50 transition-colors">
+          {{ .Page.LinkTitle }}
+        </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  {{ if $showReadMore }}
+  <a href="{{ $link }}" aria-label="Read more" class="hidden md:inline-flex shrink-0 items-center justify-center h-11 w-11 rounded-full border border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400 group-hover:border-blue-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-300">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0-4 4m4-4H3"/>
+    </svg>
+  </a>
+  {{ end }}
+</article>
