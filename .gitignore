@@ -42,6 +42,9 @@ package-lock.json
 # Development Tools
 # ============================================================================
 
+# Local toolchain downloaded for verification builds (Hugo/Go binaries, caches)
+.tools/
+
 # IDE & Editors
 .vscode/
 .idea/

@@ -20,6 +20,9 @@ main:
   - name: Projects
     url: projects/
     weight: 30
+  - name: Blog
+    url: posts/
+    weight: 35
   - name: Publications
     url: publications/
     weight: 40

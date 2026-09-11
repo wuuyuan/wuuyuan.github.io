@@ -82,6 +82,25 @@ sections:
     design:
       view: card
   - block: collection
+    id: blog
+    content:
+      title: Blog
+      subtitle: ''
+      text: 'Technical notes on embodied AI, simulation, and RL post-training.'
+      page_type: posts
+      count: 3
+      filters:
+        exclude_featured: false
+      archive:
+        enable: true
+        text: See all posts
+    design:
+      view: card
+      columns: 2
+      show_date: true
+      show_read_time: true
+      show_read_more: false
+  - block: collection
     id: news
     content:
       title: Recent News

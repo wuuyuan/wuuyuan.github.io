@@ -36,6 +36,7 @@ header:
     show_theme_chooser: true
     logo:
       text: 'Shuai Liu'
+      filename: logo.svg
 
 # Site footer
 footer:
