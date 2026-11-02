@@ -10,14 +10,14 @@ sections:
   - block: collection
     content:
       title: Research Lines
-      text: Three connected lines of work, from high-fidelity physics solvers to simulation-based learning for embodied systems.
+      text: Three research lines, from high-fidelity physics solvers to simulation-based learning, and Genie Sim 4.0 from the AgiBot internship.
       filters:
         folders:
           - projects
     design:
       view: article-grid
       fill_image: false
-      columns: 3
+      columns: 2
       show_date: false
       show_read_time: false
       show_read_more: false

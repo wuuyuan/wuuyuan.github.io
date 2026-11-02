@@ -13,3 +13,5 @@ The core line is **embodied foundation models**: simulation-based reinforcement-
 On the model side, GPU-parallel simulators drive distributed PPO/GRPO pipelines, including rollout, inference, and multi-node training. On the data/simulation side, Genesis, Newton, Warp, and Isaac Lab generate contact-rich synthetic data and tactile-grasp streams, with equivalent-thickness flexible-body formulations that keep rates high enough for online RL.
 
 High-fidelity physics is the substrate, not the destination — it supplies the data engine, the evaluator, and the sim-to-real / real-to-sim loop for robot foundation models.
+
+This line is also where the AgiBot internship landed. I was part of the GenieSim Team on [Genie Sim 4.0](/projects/genie-sim/), working on simulation-based RL post-training, the physics simulation used for that training, and the RL infrastructure.

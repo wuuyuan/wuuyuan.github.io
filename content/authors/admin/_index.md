@@ -76,9 +76,9 @@ work:
     logo_bg: light
     icon: ''
     date_start: 2026-06-01
-    date_end: ''
+    date_end: 2026-10-31
     summary: |
-      Developing scalable, simulation-based reinforcement learning post-training for embodied manipulation with vision–language–action (VLA) and world-model architectures. Contributing to distributed PPO/GRPO training pipelines, including rollout, inference, and multi-node training for generalizable dexterous manipulation.
+      Part of the GenieSim Team while interning at AgiBot. Worked on simulation-based RL post-training for robot foundation models, the physics simulation used for that training, and the RL infrastructure for rollout, inference, and multi-node training. Team release: [Genie Sim 4.0](/projects/genie-sim/) ([project](https://agibot-world.com/genie-sim), [code](https://github.com/AgibotTech/genie_sim), [report](https://agibot-world.com/genie-sim/report/)).
   - position: Research Intern, Embodied-AI Simulation Engines
     company_name: Lightwheel
     company_url: 'https://lightwheel.ai/'
